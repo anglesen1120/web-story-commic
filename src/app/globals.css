@@ -1,0 +1,74 @@
+/* Import Google fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 11%; /* navy-950 background */
+    --foreground: 0 0% 95%; /* white text */
+
+    --card: 225 37% 17%; /* Slightly lighter than background */
+    --card-foreground: 0 0% 95%; /* white text */
+
+    --popover: 222 47% 11%; /* navy-950 */
+    --popover-foreground: 0 0% 95%; /* white text */
+
+    --primary: 243 52% 40%; /* purple-700 */
+    --primary-foreground: 0 0% 98%; /* white text */
+
+    --secondary: 220 22% 36%; /* navy-600 */
+    --secondary-foreground: 0 0% 98%; /* white text */
+
+    --muted: 222 30% 20%; /* navy-800 */
+    --muted-foreground: 0 0% 70%; /* gray text */
+
+    --accent: 245 50% 30%; /* purple */
+    --accent-foreground: 0 0% 98%; /* white text */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 20% 40%; /* border color */
+    --input: 240 20% 30%; /* input background */
+    --ring: 245 50% 30%; /* purple */
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-navy-950 text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+/* Custom styles for vuitruyen */
+@layer components {
+  .vui-container {
+    @apply mx-auto w-full max-w-7xl px-4;
+  }
+
+  .vui-nav-link {
+    @apply text-foreground hover:text-primary transition-colors;
+  }
+
+  .vui-card {
+    @apply bg-navy-900 rounded-md shadow overflow-hidden;
+  }
+
+  .vui-button-primary {
+    @apply bg-primary hover:bg-purple-600 text-primary-foreground;
+  }
+
+  .vui-button-secondary {
+    @apply bg-secondary hover:bg-navy-500 text-secondary-foreground;
+  }
+}
